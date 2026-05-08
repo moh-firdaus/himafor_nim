@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIMAFOR - Himpunan Mahasiswa Informatika Visioner</title>
+    <title>Mohamad Firdaus - NIM</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Company Profile HIMAFOR (Himpunan Mahasiswa Informatika) yang visioner, inovatif, dan berorientasi pada masa depan teknologi. Wadah kolaborasi mahasiswa informatika unggulan.">
-    <meta name="keywords" content="HIMAFOR, Himpunan Mahasiswa Informatika, Informatika, Computer Science, Company Profile HIMAFOR, Mahasiswa Informatika">
+    <meta name="description"
+        content="Company Profile HIMAFOR (Himpunan Mahasiswa Informatika) yang visioner, inovatif, dan berorientasi pada masa depan teknologi. Wadah kolaborasi mahasiswa informatika unggulan.">
+    <meta name="keywords"
+        content="HIMAFOR, Himpunan Mahasiswa Informatika, Informatika, Computer Science, Company Profile HIMAFOR, Mahasiswa Informatika">
     <meta name="author" content="HIMAFOR Developer Team">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -24,9 +29,12 @@
             --bg-darker: #03050a;
             --bg-card: rgba(13, 19, 39, 0.45);
             --bg-card-hover: rgba(20, 29, 58, 0.7);
-            --primary: #00f0ff;      /* Electric Cyan */
-            --secondary: #a855f7;    /* Cyber Purple */
-            --accent: #ec4899;       /* Neon Pink */
+            --primary: #00f0ff;
+            /* Electric Cyan */
+            --secondary: #a855f7;
+            /* Cyber Purple */
+            --accent: #ec4899;
+            /* Neon Pink */
             --text-light: #f8fafc;
             --text-muted: #94a3b8;
             --border-glass: rgba(255, 255, 255, 0.06);
@@ -58,13 +66,16 @@
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
             background: var(--bg-darker);
         }
+
         ::-webkit-scrollbar-thumb {
             background: rgba(168, 85, 247, 0.3);
             border-radius: 10px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: var(--primary);
         }
@@ -81,7 +92,10 @@
         }
 
         /* Typography */
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: var(--font-heading);
             font-weight: 700;
             letter-spacing: -0.02em;
@@ -133,8 +147,13 @@
         }
 
         @keyframes floatGlow {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(50px, 80px) scale(1.15); }
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(50px, 80px) scale(1.15);
+            }
         }
 
         /* Nav Bar styling */
@@ -202,7 +221,8 @@
             padding: 0.5rem 0;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--primary);
         }
 
@@ -217,7 +237,8 @@
             transition: var(--transition);
         }
 
-        .nav-links a:hover::after, .nav-links a.active::after {
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
             width: 100%;
         }
 
@@ -392,8 +413,15 @@
         }
 
         @keyframes floatCard {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(1deg); }
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(1deg);
+            }
         }
 
         .card-top {
@@ -405,8 +433,8 @@
         .chip {
             width: 48px;
             height: 38px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
-            border: 1px solid rgba(255,255,255,0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 8px;
             position: relative;
         }
@@ -426,7 +454,7 @@
             font-family: 'Courier New', Courier, monospace;
             font-size: 0.85rem;
             color: var(--primary);
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
             padding: 1rem;
             border-radius: 0.75rem;
             margin: 1.5rem 0;
@@ -563,8 +591,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .misi-list {
@@ -1065,7 +1100,8 @@
             }
 
             .btn-join {
-                display: none; /* simple mobile simplification */
+                display: none;
+                /* simple mobile simplification */
             }
 
             .programs-timeline::before {
@@ -1113,6 +1149,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Glowing Orbs (Futuristic background layers) -->
@@ -1128,7 +1165,7 @@
                 </div>
                 <span>HIMAFOR</span>
             </a>
-            
+
             <ul class="nav-links" id="nav-menu">
                 <li><a href="#beranda" class="active">Beranda</a></li>
                 <li><a href="#tentang">Tentang</a></li>
@@ -1149,7 +1186,7 @@
     <section class="hero" id="beranda">
         <!-- Interactive Canvas for background node particles -->
         <canvas id="hero-canvas"></canvas>
-        
+
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-text">
@@ -1158,10 +1195,12 @@
                         <span>Future Ready Student Community</span>
                     </div>
                     <h1>
-                        Menembus Batas <span class="gradient-text">Teknologi</span>, Menginspirasi <span class="gradient-text">Masa Depan</span>
+                        Menembus Batas <span class="gradient-text">Teknologi</span>, Menginspirasi <span
+                            class="gradient-text">Masa Depan</span>
                     </h1>
                     <p>
-                        Himpunan Mahasiswa Informatika Visioner. Wadah kolaborasi progresif untuk melahirkan innovator digital, memperkuat riset, dan menciptakan dampak global.
+                        Himpunan Mahasiswa Informatika Visioner. Wadah kolaborasi progresif untuk melahirkan innovator
+                        digital, memperkuat riset, dan menciptakan dampak global.
                     </p>
                     <div class="hero-actions">
                         <a href="#tentang" class="btn-primary">
@@ -1173,12 +1212,13 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="hero-visual">
                     <div class="futuristic-card">
                         <div class="card-top">
                             <div class="chip"></div>
-                            <div class="gradient-text" style="font-weight: 800; font-family: var(--font-heading);">HIMAFOR ID</div>
+                            <div class="gradient-text" style="font-weight: 800; font-family: var(--font-heading);">
+                                HIMAFOR ID</div>
                         </div>
                         <div class="card-code" id="animated-code">
                             // Visionary Future Ready...
@@ -1234,7 +1274,8 @@
                 <div class="about-visual">
                     <div class="about-img-container">
                         <!-- High Quality Futuristic Tech Student Image from CDN -->
-                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600" alt="HIMAFOR Collaboration Lab">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600"
+                            alt="HIMAFOR Collaboration Lab">
                     </div>
                     <div class="about-tag">
                         <i data-lucide="award" class="gradient-text" style="width: 1.5rem; height: 1.5rem;"></i>
@@ -1248,7 +1289,8 @@
                 <div class="about-content">
                     <div class="about-header">
                         <h2>Membangun <span class="gradient-text">Ekosistem</span> Teknologi yang Berkelanjutan</h2>
-                        <p>HIMAFOR berkomitmen tidak hanya mendidik melainkan menginspirasi mahasiswa Informatika untuk menguasai teknologi termutakhir melalui eksplorasi tiada batas.</p>
+                        <p>HIMAFOR berkomitmen tidak hanya mendidik melainkan menginspirasi mahasiswa Informatika untuk
+                            menguasai teknologi termutakhir melalui eksplorasi tiada batas.</p>
                     </div>
 
                     <div class="vm-tabs">
@@ -1257,32 +1299,42 @@
                     </div>
 
                     <div id="tab-visi" class="vm-content active">
-                        <p style="font-size: 1.2rem; color: var(--text-light); border-left: 4px solid var(--primary); padding-left: 1.5rem; line-height: 1.8;">
-                            "Menjadi pusat akselerasi talenta teknologi informatika yang unggul, berkarakter adaptif, kreatif, serta visioner dalam mempelopori riset untuk pengabdian sosial global."
+                        <p
+                            style="font-size: 1.2rem; color: var(--text-light); border-left: 4px solid var(--primary); padding-left: 1.5rem; line-height: 1.8;">
+                            "Menjadi pusat akselerasi talenta teknologi informatika yang unggul, berkarakter adaptif,
+                            kreatif, serta visioner dalam mempelopori riset untuk pengabdian sosial global."
                         </p>
                     </div>
 
                     <div id="tab-misi" class="vm-content">
                         <ul class="misi-list">
                             <li class="misi-item">
-                                <div class="misi-icon"><i data-lucide="cpu" style="width: 1rem; height: 1rem;"></i></div>
+                                <div class="misi-icon"><i data-lucide="cpu" style="width: 1rem; height: 1rem;"></i>
+                                </div>
                                 <div>
                                     <h4 style="color: var(--primary);">Riset & Eksplorasi Inovatif</h4>
-                                    <p style="color: var(--text-muted); font-size: 0.95rem;">Menyelenggarakan inkubasi berbasis Artificial Intelligence, Blockchain, dan Web3 Engineering secara aplikatif.</p>
+                                    <p style="color: var(--text-muted); font-size: 0.95rem;">Menyelenggarakan inkubasi
+                                        berbasis Artificial Intelligence, Blockchain, dan Web3 Engineering secara
+                                        aplikatif.</p>
                                 </div>
                             </li>
                             <li class="misi-item">
-                                <div class="misi-icon"><i data-lucide="users" style="width: 1rem; height: 1rem;"></i></div>
+                                <div class="misi-icon"><i data-lucide="users" style="width: 1rem; height: 1rem;"></i>
+                                </div>
                                 <div>
                                     <h4 style="color: var(--primary);">Kolaborasi Multi-Sektor</h4>
-                                    <p style="color: var(--text-muted); font-size: 0.95rem;">Menghubungkan akademisi, alumni, dan industri teknologi multinasional guna menyelaraskan kurikulum non-formal.</p>
+                                    <p style="color: var(--text-muted); font-size: 0.95rem;">Menghubungkan akademisi,
+                                        alumni, dan industri teknologi multinasional guna menyelaraskan kurikulum
+                                        non-formal.</p>
                                 </div>
                             </li>
                             <li class="misi-item">
-                                <div class="misi-icon"><i data-lucide="globe" style="width: 1rem; height: 1rem;"></i></div>
+                                <div class="misi-icon"><i data-lucide="globe" style="width: 1rem; height: 1rem;"></i>
+                                </div>
                                 <div>
                                     <h4 style="color: var(--primary);">Aksi Sosial Digital</h4>
-                                    <p style="color: var(--text-muted); font-size: 0.95rem;">Menerapkan solusi komputasi berbasis masyarakat untuk digitalisasi UMKM dan akses edukasi pedesaan.</p>
+                                    <p style="color: var(--text-muted); font-size: 0.95rem;">Menerapkan solusi komputasi
+                                        berbasis masyarakat untuk digitalisasi UMKM dan akses edukasi pedesaan.</p>
                                 </div>
                             </li>
                         </ul>
@@ -1293,11 +1345,13 @@
     </section>
 
     <!-- Divisi / Departments Section -->
-    <section class="section-padding" id="divisi" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);">
+    <section class="section-padding" id="divisi"
+        style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);">
         <div class="container">
             <div class="section-header">
                 <h2>Pilar <span class="gradient-text">Departemen</span> Kami</h2>
-                <p>Didukung oleh divisi-divisi strategis yang saling bersinergi demi merealisasikan visi digital global.</p>
+                <p>Didukung oleh divisi-divisi strategis yang saling bersinergi demi merealisasikan visi digital global.
+                </p>
             </div>
 
             <div class="divisi-grid">
@@ -1308,7 +1362,8 @@
                             <i data-lucide="code-2"></i>
                         </div>
                         <h3>Riset & Teknologi</h3>
-                        <p>Jantung eksplorasi inovasi, riset, dan rekayasa perangkat lunak. Menggerakkan komunitas tech-stack terbaru.</p>
+                        <p>Jantung eksplorasi inovasi, riset, dan rekayasa perangkat lunak. Menggerakkan komunitas
+                            tech-stack terbaru.</p>
                     </div>
                     <div class="divisi-tags">
                         <span class="divisi-tag">AI / Machine Learning</span>
@@ -1324,7 +1379,8 @@
                             <i data-lucide="user-check"></i>
                         </div>
                         <h3>Pengembangan SDM</h3>
-                        <p>Fokus pada pertumbuhan intelektual, karakter, soft-skills, dan penanaman kepemimpinan yang berintegritas.</p>
+                        <p>Fokus pada pertumbuhan intelektual, karakter, soft-skills, dan penanaman kepemimpinan yang
+                            berintegritas.</p>
                     </div>
                     <div class="divisi-tags">
                         <span class="divisi-tag">Leadership Bootcamp</span>
@@ -1340,7 +1396,8 @@
                             <i data-lucide="palette"></i>
                         </div>
                         <h3>Media & Informasi</h3>
-                        <p>Menyajikan kreasi branding visual, publikasi terarah, informasi taktis, serta perancangan visual organisasi.</p>
+                        <p>Menyajikan kreasi branding visual, publikasi terarah, informasi taktis, serta perancangan
+                            visual organisasi.</p>
                     </div>
                     <div class="divisi-tags">
                         <span class="divisi-tag">UI/UX Design</span>
@@ -1356,7 +1413,8 @@
                             <i data-lucide="network"></i>
                         </div>
                         <h3>Hubungan Masyarakat</h3>
-                        <p>Membangun jembatan komunikasi, kemitraan strategis eksternal, dan merawat hubungan berkesinambungan.</p>
+                        <p>Membangun jembatan komunikasi, kemitraan strategis eksternal, dan merawat hubungan
+                            berkesinambungan.</p>
                     </div>
                     <div class="divisi-tags">
                         <span class="divisi-tag">Industrial Relations</span>
@@ -1372,7 +1430,8 @@
                             <i data-lucide="gamepad-2"></i>
                         </div>
                         <h3>Minat & Bakat</h3>
-                        <p>Mengakomodasi bakat non-akademik anggota di bidang esport, seni kreatif, dan inovasi visual modern.</p>
+                        <p>Mengakomodasi bakat non-akademik anggota di bidang esport, seni kreatif, dan inovasi visual
+                            modern.</p>
                     </div>
                     <div class="divisi-tags">
                         <span class="divisi-tag">Competitive Coding</span>
@@ -1389,7 +1448,8 @@
         <div class="container">
             <div class="section-header">
                 <h2>Program <span class="gradient-text">Eksklusif</span> Kami</h2>
-                <p>Eksplorasi jajaran program kerja terencana yang dirancang untuk akselerasi karir dan kemampuan global.</p>
+                <p>Eksplorasi jajaran program kerja terencana yang dirancang untuk akselerasi karir dan kemampuan
+                    global.</p>
             </div>
 
             <div class="programs-timeline">
@@ -1397,7 +1457,8 @@
                     <div class="glass-panel timeline-card">
                         <div class="timeline-date">Juni 2026</div>
                         <h3>HIMAFOR Tech Summit</h3>
-                        <p>Seminar akbar tingkat nasional yang mendatangkan pakar ternama dari tech giants dunia untuk membahas tren AI terapan dan Web3.</p>
+                        <p>Seminar akbar tingkat nasional yang mendatangkan pakar ternama dari tech giants dunia untuk
+                            membahas tren AI terapan dan Web3.</p>
                     </div>
                 </div>
 
@@ -1405,7 +1466,8 @@
                     <div class="glass-panel timeline-card">
                         <div class="timeline-date">Agustus 2026</div>
                         <h3>HIMA-Hackfest</h3>
-                        <p>Ajang Hackathon bergengsi 48 jam nonstop untuk menantang kreativitas mahasiswa dalam menciptakan solusi teknologi berkelanjutan.</p>
+                        <p>Ajang Hackathon bergengsi 48 jam nonstop untuk menantang kreativitas mahasiswa dalam
+                            menciptakan solusi teknologi berkelanjutan.</p>
                     </div>
                 </div>
 
@@ -1413,7 +1475,8 @@
                     <div class="glass-panel timeline-card">
                         <div class="timeline-date">Oktober 2026</div>
                         <h3>Informatics Youth Camp</h3>
-                        <p>Bootcamp intensif pengembangan kepemimpinan dan eksplorasi advanced coding guna mempersiapkan generasi andalan Himpunan berikutnya.</p>
+                        <p>Bootcamp intensif pengembangan kepemimpinan dan eksplorasi advanced coding guna mempersiapkan
+                            generasi andalan Himpunan berikutnya.</p>
                     </div>
                 </div>
 
@@ -1421,7 +1484,8 @@
                     <div class="glass-panel timeline-card">
                         <div class="timeline-date">Desember 2026</div>
                         <h3>DevDay Exhibition</h3>
-                        <p>Pameran dan panggung presentasi bagi karya terbaik mahasiswa, dipertemukan langsung dengan investor dan inkubator startup.</p>
+                        <p>Pameran dan panggung presentasi bagi karya terbaik mahasiswa, dipertemukan langsung dengan
+                            investor dan inkubator startup.</p>
                     </div>
                 </div>
             </div>
@@ -1429,11 +1493,13 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section-padding" id="kontak" style="background: radial-gradient(circle at 10% 90%, rgba(168, 85, 247, 0.08) 0%, var(--bg-darker) 100%);">
+    <section class="section-padding" id="kontak"
+        style="background: radial-gradient(circle at 10% 90%, rgba(168, 85, 247, 0.08) 0%, var(--bg-darker) 100%);">
         <div class="container">
             <div class="section-header">
                 <h2>Mulai <span class="gradient-text">Kolaborasi</span> Visioner</h2>
-                <p>Mari bergabung bersama kami membangun masa depan digital. Sampaikan aspirasimu atau tawarkan jalinan kerja sama.</p>
+                <p>Mari bergabung bersama kami membangun masa depan digital. Sampaikan aspirasimu atau tawarkan jalinan
+                    kerja sama.</p>
             </div>
 
             <div class="contact-grid">
@@ -1478,15 +1544,18 @@
                             </div>
                             <div class="form-group">
                                 <label for="email">Alamat Email</label>
-                                <input type="email" id="email" class="form-control" placeholder="email@domain.com" required>
+                                <input type="email" id="email" class="form-control" placeholder="email@domain.com"
+                                    required>
                             </div>
                             <div class="form-group form-group-full">
                                 <label for="subject">Subjek / Perihal</label>
-                                <input type="text" id="subject" class="form-control" placeholder="Kolaborasi / Pertanyaan" required>
+                                <input type="text" id="subject" class="form-control"
+                                    placeholder="Kolaborasi / Pertanyaan" required>
                             </div>
                             <div class="form-group form-group-full">
                                 <label for="message">Pesan Anda</label>
-                                <textarea id="message" class="form-control" placeholder="Tuliskan pesan atau ide kolaborasimu disini..." required></textarea>
+                                <textarea id="message" class="form-control"
+                                    placeholder="Tuliskan pesan atau ide kolaborasimu disini..." required></textarea>
                             </div>
                         </div>
                         <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
@@ -1510,7 +1579,8 @@
                         </div>
                         <span>HIMAFOR</span>
                     </a>
-                    <p>Membentuk pemimpin teknologi masa depan yang tidak hanya kompeten secara teknis, namun berjiwa kemanusiaan dan adaptif global.</p>
+                    <p>Membentuk pemimpin teknologi masa depan yang tidak hanya kompeten secara teknis, namun berjiwa
+                        kemanusiaan dan adaptif global.</p>
                     <div class="social-links">
                         <a href="#" class="social-btn"><i data-lucide="instagram"></i></a>
                         <a href="#" class="social-btn"><i data-lucide="github"></i></a>
@@ -1541,7 +1611,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 HIMAFOR (Himpunan Mahasiswa Informatika). All Rights Reserved. Engineered with Passion for the Future.</p>
+                <p>&copy; 2026 HIMAFOR (Himpunan Mahasiswa Informatika). All Rights Reserved. Engineered with Passion
+                    for the Future.</p>
             </div>
         </div>
     </footer>
@@ -1611,7 +1682,7 @@
             // Find current event trigger and set active
             const currentBtn = Array.from(document.querySelectorAll('.vm-tab-btn')).find(btn => btn.textContent.toLowerCase() === tabId);
             if (currentBtn) currentBtn.classList.add('active');
-            
+
             document.getElementById(`tab-${tabId}`).classList.add('active');
         }
 
@@ -1669,7 +1740,7 @@
 
         function animateParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
+
             // Draw connections
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
@@ -1709,7 +1780,7 @@
             "};",
             "console.log('Shaping tomorrow');"
         ];
-        
+
         let lineIdx = 0;
         let charIdx = 0;
         const codeContainer = document.getElementById('animated-code');
@@ -1744,8 +1815,9 @@
                 }, 8000);
             }
         }
-        
+
         setTimeout(typeCode, 1000);
     </script>
 </body>
+
 </html>
