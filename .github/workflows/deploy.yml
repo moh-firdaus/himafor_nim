@@ -21,7 +21,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./web-statis
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/himafor_nim:latest
 
@@ -32,7 +32,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         
-      - name: Remove dummy SQL file
+      - name: Deploy to EC2 via SSH and run docker compose 
         uses: appleboy/ssh-action@v1.0.3
         with: 
           host: ${{ secrets.AWS_HOST }}
