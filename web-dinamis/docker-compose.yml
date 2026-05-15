@@ -9,7 +9,7 @@ database_compro:
     - MARIADB_PASSWORD=12345
   volumes:
     - db_data_v2:/var/lib/mysql
-    - ./database_compro/init:/docker-entrypoint-initdb.d/dbcompro_nim.sql:ro
+    - ./database/dbcompro_nim.sql:/docker-entrypoint-initdb.d/dbcompro_nim.sql:ro
   restart: always
   
 # Layanan Web Statis
