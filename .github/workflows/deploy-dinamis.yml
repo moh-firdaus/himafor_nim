@@ -1,9 +1,12 @@
 name: Deploy Web Dinamis to AWS EC2
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
     paths: 
       - 'web-dinamis/**'
+      - '.github/workflows/deploy-dinamis.yml'
+
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -61,4 +64,5 @@ jobs:
             cd /home/ubuntu/kontainer-dinamis
             sudo docker compose down
             sudo docker compose up -d
+
           
