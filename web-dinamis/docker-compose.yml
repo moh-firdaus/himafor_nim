@@ -14,7 +14,7 @@ database_compro:
   
 # Layanan Web Statis
 kontainer-statis:
-  image:{{ secrets.DOCKERHUB_USERNAME}}/himafor_nim:latest
+  image:mohamadfirdaus12/himafor_nim:latest
   container_name:kontainer-statis
   ports:
     - "80:80"
@@ -22,7 +22,7 @@ kontainer-statis:
     
 # Layanan Web Dinamis
 kontainer-dinamis:
-  image:{{ secrets.DOCKERHUB_USERNAME}}/web-dinamis:latest
+  image:mohamadfirdaus12/web-dinamis:latest
   ports:
     - "3000:3000"
   restart: always
