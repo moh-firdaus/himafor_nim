@@ -1,16 +1,16 @@
 services:
 #Layanan Database 
-database_compro:
-  image: mariadb:lts
-  environment:
-    - MARIADB_ROOT_PASSWORD=compro_nim
-    - MARIADB_DATABASE=dbcompro_nim
-    - MARIADB_USER=usercompro_nim
-    - MARIADB_PASSWORD=12345
-  volumes:
-    - db_data_v2:/var/lib/mysql
-    - ./database/dbcompro_nim.sql:/docker-entrypoint-initdb.d/dbcompro_nim.sql:ro
-  restart: always
+  database_compro:
+    image: mariadb:lts
+    environment:
+      MARIADB_ROOT_PASSWORD: "compro_nim!123"
+      MARIADB_DATABASE: dbcompro_nim
+      MARIADB_USER: usercompro_nim
+      MARIADB_PASSWORD: "12345"
+    volumes:
+        - db_data_v2:/var/lib/mysql
+      - ./database/dbcompro_nim.sql:/docker-entrypoint-initdb.d/dbcompro_nim.sql:ro
+    restart: always
   
 # Layanan Web Statis
   kontainer-statis:
@@ -27,7 +27,7 @@ database_compro:
       - "3000:3000"
     restart: always
     environment:
-      DB_HOST: database_compro
+        DB_HOST: database_compro
       DB_USER: usercompro_nim
       DB_PASSWORD: 12345
       DB_NAME: dbcompro_nim
