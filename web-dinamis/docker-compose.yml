@@ -13,26 +13,26 @@ database_compro:
   restart: always
   
 # Layanan Web Statis
-kontainer-statis:
-  image: mohamadfirdaus12/himafor_nim:latest
-  container_name: kontainer-statis
-  ports:
-    - "80:80"
-  restart: always
-    
-# Layanan Web Dinamis
-kontainer-dinamis:
-  image: mohamadfirdaus12/web-dinamis:latest
-  ports:
-    - "3000:3000"
-  restart: always
-  environment:
-    DB_HOST: database_compro
-    DB_USER: usercompro_nim
-    DB_PASSWORD: 12345
-    DB_NAME: dbcompro_nim
-  depends_on:
-    - database_compro
+  kontainer-statis:
+    image: mohamadfirdaus12/himafor_nim:latest
+    container_name: kontainer-statis
+    ports:
+      - "80:80"
+    restart: always
+      
+  # Layanan Web Dinamis
+  kontainer-dinamis:
+    image: mohamadfirdaus12/web-dinamis:latest
+    ports:
+      - "3000:3000"
+    restart: always
+    environment:
+      DB_HOST: database_compro
+      DB_USER: usercompro_nim
+      DB_PASSWORD: 12345
+      DB_NAME: dbcompro_nim
+    depends_on:
+      - database_compro
   
 volumes:
   db_data_v2: {}
