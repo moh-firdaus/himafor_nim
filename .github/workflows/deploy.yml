@@ -43,4 +43,4 @@ jobs:
             docker rm -f himafor_nim
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/himafor_nim:latest
             docker run -d --name himafor_nim -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/himafor_nim:latest
-            docker update --restart= always himafor_nim
+           
