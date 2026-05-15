@@ -1,7 +1,7 @@
 name: Deploy Web Static to AWS EC2
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
     paths: 
       - 'web-statis/**'
       - '.github/workflows/deploy.yml'
@@ -11,29 +11,36 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-    - name: Login to Docker Hub
-      uses: docker/login-action@v3
-      with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v5
-      with:
-        context: .
-        push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/himafor_nim:latest
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/himafor_nim:latest
 
-  - name: Deploy to EC2 via SSH and run docker compose 
-    uses: appleboy/ssh-action@v1.0.3
-    with:
-      host: ${{ secrets.AWS_HOST }}
-      username: ${{ secrets.AWS_USERNAME }}
-      key: ${{ secrets.AWS_PRIVATE_KEY }}
-      port: 22
-      script: |
-        docker rm -f himafor_nim
-        docker pull ${{ secrets.DOCKERHUB_USERNAME }}/himafor_nim:latest
-        docker run -d --name himafor_nim -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/himafor_nim:latest
-        docker update --restart= always himafor_nim
+  Deploy-to-ec2 :
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Remove dummy SQL file
+        uses: appleboy/ssh-action@v1.0.3
+        with: 
+          host: ${{ secrets.AWS_HOST }}
+          username: ${{ secrets.AWS_USERNAME }}
+          key: ${{ secrets.AWS_PRIVATE_KEY }}
+          port: 22
+          script: |
+            docker rm -f himafor_nim
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/himafor_nim:latest
+            docker run -d --name himafor_nim -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/himafor_nim:latest
+            docker update --restart= always himafor_nim
