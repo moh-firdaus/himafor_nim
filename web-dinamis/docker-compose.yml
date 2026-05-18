@@ -30,4 +30,8 @@ services:
       DB_HOST: db-webdinamis
       NEXTAUTH_SECRET: ini-kata-kata-bebas-saja-32-karekter
       NEXTAUTH_URL: http://54.252.231.6:3000
+    depends_on:
+      - db-webdinamis
+
+volumes:
   db_data: {}
